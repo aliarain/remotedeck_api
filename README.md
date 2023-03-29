@@ -1,73 +1,64 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Project Name
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+RemoteDeck
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+RemoteDeck is a platform that connects developers with remote job opportunities across the globe. It's designed to help developers find work from anywhere, and to help companies find top talent without being limited by location.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
-```bash
-$ yarn install
-```
+To get started with RemoteDeck, follow these steps:
 
-## Running the app
+1. Clone this repository to your local machine using `git clone https://github.com/your-username/remotedeck.git`.
+2. Install the necessary dependencies by running `npm install`.
+3. Configure the database connection in `src/config/db.config.ts`. You can use MongoDB or another database of your choice.
+4. Generate a JWT secret key by running `openssl rand -base64 32` and replace the value in `src/config/auth.config.ts`.
+5. Run the application by running `npm run start:dev`.
 
-```bash
-# development
-$ yarn run start
+The application will be accessible at `http://localhost:3000`.
 
-# watch mode
-$ yarn run start:dev
+## Features
 
-# production mode
-$ yarn run start:prod
-```
+RemoteDeck provides the following features:
 
-## Test
+- Job search
+- Job filtering and sorting
+- Job details
+- Application tracking
+- Resume builder
+- Company profiles
+- Authentication and authorization
 
-```bash
-# unit tests
-$ yarn run test
+## Technologies
 
-# e2e tests
-$ yarn run test:e2e
+RemoteDeck was built using the following technologies:
 
-# test coverage
-$ yarn run test:cov
-```
+- NestJS
+- Elasticsearch
+- MongoDB
+- Angular
+- Bootstrap
+- JSON Web Tokens
 
-## Support
+## Contributing
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+If you'd like to contribute to this project, please follow these guidelines:
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. Fork this repo.
+2. Create a new branch.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to the new branch.
+5. Submit a pull request.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the terms of the MIT license. See the [LICENSE](/LICENSE) file for more details.

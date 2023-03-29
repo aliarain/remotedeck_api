@@ -1,8 +1,20 @@
 import { NestFactory } from '@nestjs/core';
+import { ValidationPipe } from '@nestjs/common'
 import { AppModule } from './app.module';
+import { DocumentBuilder } from '@nestjs/swagger';
+import { SwaggerModule } from '@nestjs/swagger/dist';
+import  chalk from 'chalk';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+  const app = await NestFactory.create(AppModule, {cors: true});
+  app.setGlobalPrefix('api');
+  app.useGlobalPipes(new ValidationPipe());
+  const config = new DocumentBuilder().setTitle('RemoteDeck').setDescription('RemoteDeck API').setVersion('0.2').addTag('remotedeck').build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app ,document);
+  const PORT = process.env.PORT || 5909
+  await app.listen(PORT);
+  console.log(chalk.blue.bgRed.bold(`Api is Running on ${await app.getUrl}/api`));
+
 }
 bootstrap();
