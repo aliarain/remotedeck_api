@@ -3,7 +3,7 @@ import { ValidationPipe } from '@nestjs/common'
 import { AppModule } from './app.module';
 import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
-import  chalk from 'chalk';
+
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {cors: true});
@@ -14,7 +14,7 @@ async function bootstrap() {
   SwaggerModule.setup('docs', app ,document);
   const PORT = process.env.PORT || 5909
   await app.listen(PORT);
-  console.log(chalk.blue.bgRed.bold(`Api is Running on ${await app.getUrl}/api`));
+  console.log(`Api is Running on ${await app.getUrl}/api`);
 
 }
 bootstrap();
