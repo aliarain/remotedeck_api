@@ -12,7 +12,7 @@ async function bootstrap() {
   const config = new DocumentBuilder().setTitle('RemoteDeck').setDescription('RemoteDeck API').setVersion('0.2').addTag('remotedeck').build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app ,document);
-  const PORT = process.env.PORT || 5909
+  const PORT = process.env.PORT || 3000
   await app.listen(PORT);
   console.log(`Api is Running on https://localhost${PORT}/api`);
 
